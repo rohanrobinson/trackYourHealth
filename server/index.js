@@ -6,7 +6,7 @@ const app = express();
 
 
 app.get('/api', (request, response) => {
-    response.json({patientName: "Server says hello...",
+    response.json({patientName: "Kavitha Gowda",
                    symptomsList: ['Dizzy', 'Vomiting', 'Stomach pain']                     
     });
 });

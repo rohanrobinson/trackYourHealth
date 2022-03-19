@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
 function App() {
+
+
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-           <code>Accountable</code> <br/> <br/> Track your Health. <br/>  Improve your Fitness.
+           <code>Accountable Health</code> <br/> <br/> Track your Symptoms.  <br/>   Manage your Meds. <br/> Improve your Fitness. <br/> <br/> Feel. <br/> Amazing.
         </p>
         <p>Let's get it :)</p> 
-        <p>Coming to a URL near you</p>
+
+        <br></br>
+
         <a
+          id="Designs"
           className="App-link"
-          href="https://www.figma.com/file/UuKhpaGfzxqwqT4PHB6U8Y/Accountable?node-id=0%3A2"
+          href="https://www.figma.com/file/UuKhpaGfzxqwqT4PHB6U8Y/Accountable?node-id=140%3A2"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Check out current Designs/Prototype
+          Check out the current Design/Prototype
         </a>
       </header>
     </div>
