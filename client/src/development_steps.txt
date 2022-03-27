@@ -1,0 +1,11 @@
+#
+----------------------------------------
+(1) Create Core User Functionality
+    Based on Figma Design: https://www.figma.com/file/UuKhpaGfzxqwqT4PHB6U8Y/Accountable?node-id=140%3A2
+
+    Create User Flow for A single User to Add/Edit/View/Generate Shareable info related to their Healthcare-related Symtpoms 
+        
+
+
+
+----------------------------------------

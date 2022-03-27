@@ -1,31 +1,59 @@
 import './App.css';
-import React from 'react';
+import React, { Component } from 'react';
+import GetPatientInfo from './components/GetPatientInfo.js'
 
-function App() {
+  class App extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        show: false,
+      };
 
+      this.showModal = this.showModal.bind(this);
+      this.hideModal = this.hideModal.bind(this);
+      this.handleKeyPress = this.handleKeyPress.bind(this);
+    
+    }
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-           <code>Accountable Health</code> <br/> <br/> Track your Symptoms.  <br/>   Manage your Meds. <br/> Improve your Fitness. <br/> <br/> Feel. <br/> Amazing.
-        </p>
-        <p>Let's get it :)</p> 
+    handleKeyPress = (event) => {
+      if (event.key === 'Enter') {
+          var inputs = document.getElementsByClassName("inputSymptom");
+          for (var i = 0; i < inputs.length; i++) {
+            console.log(inputs[i].value);
+          }
+      }
+  }
+  
+    plusButtonClick = (event) => {
+      
+    }
 
-        <br></br>
+    showModal = () => {
+      this.setState({show: true});
+    };
 
-        <a
-          id="Designs"
-          className="App-link"
-          href="https://www.figma.com/file/UuKhpaGfzxqwqT4PHB6U8Y/Accountable?node-id=140%3A2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Check out the current Design/Prototype
-        </a>
-      </header>
-    </div>
-  );
-}
+    hideModal = () => {
+      this.setState({show: false});
+    };
+    
+      render() {
+        return (
+          <main>
+            <div className="App">
+              <header className="App-header">
+                <p>
+                  <code>Accountable Health</code> <br/> <br/> Track your Symptoms. Have Peace of Mind. <br /> <br /> 
+                  <button type="button" id="getStartedBtn" onClick={this.showModal}>Get Started</button>
+                  <GetPatientInfo show={this.state.show} handleClose={this.hideModal} handleKeyPress={this.handleKeyPress} plusButtonClick={this.plusButtonClick}/>
 
-export default App;
+                </p>
+              </header>
+
+            </div>
+        </main>
+        );
+      }
+    }
+    
+    export default App;
+
