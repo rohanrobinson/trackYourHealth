@@ -1,9 +1,20 @@
-#
+# Building Accountable Health
 ----------------------------------------
 (1) Create Core User Functionality
     Based on Figma Design: https://www.figma.com/file/UuKhpaGfzxqwqT4PHB6U8Y/Accountable?node-id=140%3A2
 
-    Create User Flow for A single User to Add/Edit/View/Generate Shareable info related to their Healthcare-related Symtpoms 
+    Create React UI Componenets
+        * Welcome (App.js) (Connects to PatientInfo, Symptom, Feedback, NotesViewBySymptom, AddSymptom)
+        * Symptom (Connects to NavBar-> {Welcome, PatientInfo}, NotesViewBySymptom)
+        * Feedback (Connects to NavBar-> {Welcome, PatientInfo}, Welcome)
+        * NotesViewBySymptom (Connects to NavBar-> {Welcome, PatientInfo}, NotesViewByDate, Symptom, NoteView )
+        * NotesViewByDate  (Connects to NavBar-> {Welcome, PatientInfo}, NotesViewByCalendar, Symptom, NoteView )
+        * NavBar (present on all components, Connects to Welcome, PatientInfo)
+        * NoteView (Connects to NavBar-> {Welcome, PatientInfo}, NotesViewByCalendar)
+        * AddNewSymptom (Connects to NavBar-> {Welcome, PatientInfo}, Welcome)
+        * PatientInfo (Connects to NavBar-> {Welcome, PatientInfo},
+
+    
         
 
 

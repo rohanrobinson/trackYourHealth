@@ -1,5 +1,5 @@
 # Accountable
 
-## Track and Improve Your Health
+## Track your Symptoms. Have Peace of Mind.
 
-## Take your Well-being to new heights by managing your symptoms and increasing your fitness  
+## Accountable helps you and your provider focus on what matters. 

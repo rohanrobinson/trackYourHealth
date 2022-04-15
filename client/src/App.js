@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
-import GetPatientInfo from './components/GetPatientInfo.js'
+import GetPatientInfo from './components/GetPatientInfo.js';
+import FAQ from './components/FAQ.js';
 
   class App extends Component {
     constructor(props) {
@@ -24,8 +25,8 @@ import GetPatientInfo from './components/GetPatientInfo.js'
       }
   }
   
-    plusButtonClick = (event) => {
-      
+    plusButtonClick = () => {
+       console.log("add new functionality for a new button");
     }
 
     showModal = () => {
@@ -33,7 +34,7 @@ import GetPatientInfo from './components/GetPatientInfo.js'
     };
 
     hideModal = () => {
-      this.setState({show: false});
+        this.setState({show: false});
     };
     
       render() {
@@ -41,11 +42,15 @@ import GetPatientInfo from './components/GetPatientInfo.js'
           <main>
             <div className="App">
               <header className="App-header">
-                <p>
-                  <code>Accountable Health</code> <br/> <br/> Track your Symptoms. Have Peace of Mind. <br /> <br /> 
-                  <button type="button" id="getStartedBtn" onClick={this.showModal}>Get Started</button>
-                  <GetPatientInfo show={this.state.show} handleClose={this.hideModal} handleKeyPress={this.handleKeyPress} plusButtonClick={this.plusButtonClick}/>
 
+                <p id="FAQ" onClick={this.showModal}><i>What is Accountable?</i></p>
+                <p>
+                  <code>Accountable</code> <br/> <br/> Track your Symptoms. Have Peace of Mind. <br /> <br /> 
+                  <button type="button" className='landingPageBtn' id="getStartedBtn" onClick={this.showModal}>New Here?  <br /> Let's Get Started.</button>   <br /> 
+                  <button type="button" className='landingPageBtn' id="signInBtn" onClick={()=>console.log("pull up been before modal")}>Been Here Before? <br/> Sign In.</button>
+
+                  <GetPatientInfo show={this.state.show} handleClose={this.hideModal} handleKeyPress={this.handleKeyPress} plusButtonClick={this.plusButtonClick} />
+                  <FAQ show={this.state.show} handleClose={this.hideModal} handleKeyPress={this.handleKeyPress} />
                 </p>
               </header>
 
@@ -56,4 +61,3 @@ import GetPatientInfo from './components/GetPatientInfo.js'
     }
     
     export default App;
-

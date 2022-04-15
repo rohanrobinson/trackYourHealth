@@ -24,6 +24,13 @@
   color: gray;
 }
 
+
+#FAQ {
+  margin-left: 500px;
+  font-size: 25px;
+}
+
+
 .App-link {
   color: #61dafb;
 }
@@ -37,12 +44,12 @@
   }
 }
 
-#getStartedBtn {
+.landingPageBtn {
   background-color: lightblue;
   color: black;
   min-height: 50px;
 }
 
-#getStartedBtn:hover {
+#getStartedBtn:hover, #FAQ:hover {
   cursor: pointer;
 }

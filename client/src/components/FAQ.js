@@ -1,13 +1,13 @@
-import '../GetPatientInfo.css';
+import '../FAQ.css';
 
-const GetPatientInfo = ({ handleClose, show, handleKeyPress, plusButtonClick}) => {
+const FAQ = ({ handleClose, show, handleKeyPress, plusButtonClick}) => {
     const showHideClassName = show ? 'modal display-block' : 'modal display-none';
 
     return (
         <div className={showHideClassName}>
             <section className='modal-main'>
             <button type="button" className="modalButton" onClick={handleClose}>Close</button>    
-                <h2>Insert Better Headline here lmao</h2>
+                <h2>Accountable FAQ</h2>
 
 
             <div id="firstSet">
@@ -26,7 +26,7 @@ const GetPatientInfo = ({ handleClose, show, handleKeyPress, plusButtonClick}) =
 
                 <br />
 
-                <button id="firstSetBtn" onClick={event => plusButtonClick(event.target.id)}>Next</button>
+                <button id="firstSetBtn" onClick={plusButtonClick}>Next</button>
             </div>
 
             </section>
@@ -34,4 +34,4 @@ const GetPatientInfo = ({ handleClose, show, handleKeyPress, plusButtonClick}) =
     );
 };
 
-export default GetPatientInfo;
+export default FAQ;
